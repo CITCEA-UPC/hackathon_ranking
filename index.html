@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Live leaderboard for the TenSyGrid x VeraGrid 1-day hackathon challenge.">
+    <meta name="theme-color" content="#0f172a">
+    <title>TenSyGrid x VeraGrid · Live Leaderboard</title>
+    <link rel="icon" type="image/png" href="images/tensygrid-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="event-badge">26 Nov 2026 · UPC · CITCEA · eRoots · Horizon Europe</p>
+        <h1 class="brand-lockup" aria-label="TenSyGrid x VeraGrid">
+          <span class="tensygrid-logo-frame">
+            <img
+              class="tensygrid-logo"
+              src="images/tensygrid-logo.png"
+              alt="TensyGrid"
+              width="572"
+              height="152"
+            >
+          </span>
+          <span class="brand-separator" aria-hidden="true">×</span>
+          <span class="veragrid-logo-frame">
+            <img
+              class="veragrid-logo"
+              src="images/veragrid-logo.png"
+              alt="VeraGrid"
+              width="750"
+              height="150"
+            >
+          </span>
+        </h1>
+        <p class="subtitle">Dynamic Topology Optimization &amp; Converter Tuning — Live Leaderboard</p>
+      </header>
+
+      <main>
+        <section class="leaderboard-card" aria-labelledby="leaderboard-title">
+          <div class="toolbar">
+            <div>
+              <p class="eyebrow">Official ranking</p>
+              <h2 id="leaderboard-title">Live results</h2>
+            </div>
+
+            <div class="actions">
+              <label class="search-box" for="team-search">
+                <span aria-hidden="true">⌕</span>
+                <span class="sr-only">Search for a team</span>
+                <input
+                  id="team-search"
+                  type="text"
+                  placeholder="Search for a team…"
+                  autocomplete="off"
+                  spellcheck="false"
+                >
+              </label>
+              <button id="refresh-button" class="refresh-button" type="button">
+                <span aria-hidden="true">↻</span>
+                Refresh data
+              </button>
+            </div>
+          </div>
+
+          <div id="status" class="status" role="status" aria-live="polite">Loading results…</div>
+
+          <div class="table-wrap">
+            <table>
+              <caption class="sr-only">Team ranking ordered by total score</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Pos</th>
+                  <th scope="col">Team</th>
+                  <th scope="col"><span class="metric-symbol">S<sub>damping</sub></span> <small>35%</small></th>
+                  <th scope="col"><span class="metric-symbol">S<sub>loss</sub></span> <small>25%</small></th>
+                  <th scope="col"><span class="metric-symbol">S<sub>robustness</sub></span> <small>25%</small></th>
+                  <th scope="col"><span class="metric-symbol">S<sub>changes</sub></span> <small>15%</small></th>
+                  <th scope="col" class="score-heading">Total score</th>
+                </tr>
+              </thead>
+              <tbody id="ranking-body"></tbody>
+            </table>
+          </div>
+
+          <p id="empty-state" class="empty-state" hidden>No team was found with that name.</p>
+        </section>
+
+        <aside class="formula-note" aria-label="Scoring formula">
+          <span class="info-icon" aria-hidden="true">i</span>
+          <p>
+            <strong>Official formula:</strong>
+            Score = (0.35 · S<sub>damping</sub> + 0.25 · S<sub>loss</sub> +
+            0.25 · S<sub>robustness</sub> + 0.15 · S<sub>changes</sub>) × 100.
+            A damping value of 0 indicates an unstable mode.
+          </p>
+        </aside>
+
+        <section class="funding-strip" aria-label="Funding partner">
+          <p>Co-funded by</p>
+          <img
+            src="images/cetpartnership-logo.png"
+            alt="CETPartnership"
+            width="576"
+            height="285"
+          >
+        </section>
+      </main>
+
+      <footer>
+        <p>TenSyGrid x VeraGrid 1-day hackathon challenge · Barcelona, 2026</p>
+      </footer>
+    </div>
+  </body>
+</html>

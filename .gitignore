@@ -1,0 +1,37 @@
+# Python environments and cache
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Vercel local configuration
+.vercel/
+
+# Dependency and build output (if tooling is added later)
+node_modules/
+dist/
+build/
+
+# Local environment variables
+.env
+.env.*
+!.env.example
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+coverage/

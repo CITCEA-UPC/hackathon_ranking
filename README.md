@@ -4,6 +4,18 @@ A lightweight, responsive leaderboard for the **TenSyGrid x VeraGrid 1-day hacka
 
 The application displays the live ranking for the dynamic topology optimisation and converter tuning challenge. It is a fully static website built with HTML5, CSS3, and Vanilla JavaScript—no framework, build step, backend, database, or external API is required.
 
+## TenSyGrid consortium
+
+The project partners represented on the website are:
+
+- Fraunhofer Institute for Wind Energy Systems IWES
+- Universitat Politècnica de Catalunya (UPC)
+- Hamburg University of Applied Sciences (HAW Hamburg)
+- eRoots Analytics
+- University of Malta
+
+CETPartnership is presented separately as the co-funding programme.
+
 ## Features
 
 - Automatic ranking by weighted total score
@@ -27,6 +39,12 @@ The application displays the live ranking for the dynamic topology optimisation 
 ├── ranking.json               # Team metrics and names
 ├── images/
 │   ├── cetpartnership-logo.png
+│   ├── eroots_logos/
+│   │   └── eRoots_logo_final_v2_landscape_fullColor.png
+│   ├── partner-fraunhofer-iwes.png
+│   ├── partner-haw-hamburg.png
+│   ├── partner-university-malta.png
+│   ├── partner-upc.png
 │   ├── tensygrid-icon.png
 │   ├── tensygrid-logo.png
 │   └── veragrid-logo.png

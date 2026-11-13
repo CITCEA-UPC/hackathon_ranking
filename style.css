@@ -92,20 +92,6 @@ input {
   pointer-events: none;
 }
 
-.event-badge {
-  display: inline-flex;
-  margin: 0 0 24px;
-  padding: 7px 15px;
-  border: 1px solid rgba(0, 133, 152, 0.3);
-  border-radius: 999px;
-  color: var(--tg-petrol);
-  background: rgba(57, 193, 205, 0.08);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.055em;
-  text-transform: uppercase;
-}
-
 h1,
 h2,
 p {
@@ -415,16 +401,51 @@ tbody tr:last-child td {
   font-weight: 700;
 }
 
+.partners-section {
+  margin-top: 24px;
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--tg-petrol);
+  background: var(--surface);
+}
+
+.partners-heading {
+  padding: 20px 24px 10px;
+  text-align: center;
+}
+
+.partner-logos {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  padding: 14px 24px 24px;
+}
+
+.partner-logo-card {
+  display: flex;
+  min-height: 92px;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  border: 1px solid #e4ecef;
+  background: #fff;
+}
+
+.partner-logo-card img {
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  height: 58px;
+  object-fit: contain;
+}
+
 .funding-strip {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 18px;
-  margin-top: 24px;
-  padding: 20px 24px;
+  padding: 16px 24px;
   border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background: var(--surface);
+  background: #f4f9fa;
 }
 
 .funding-strip p {
@@ -480,10 +501,6 @@ footer p {
     display: none;
   }
 
-  .event-badge {
-    line-height: 1.45;
-  }
-
   .brand-lockup {
     flex-direction: column;
     gap: 6px;
@@ -535,6 +552,28 @@ footer p {
   th,
   td {
     padding: 14px 15px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  .partner-logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .partner-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-inline: 16px;
+  }
+
+  .partner-logo-card {
+    min-height: 82px;
+    padding: 10px;
+  }
+
+  .partner-logo-card:last-child {
+    grid-column: 1 / -1;
   }
 }
 

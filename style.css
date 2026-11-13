@@ -141,6 +141,58 @@ h1 {
   font-size: clamp(0.95rem, 2vw, 1.12rem);
 }
 
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.hero-btn:active {
+  transform: translateY(1px);
+}
+
+.hero-btn--outline {
+  border: 1.5px solid var(--tg-petrol);
+  color: var(--tg-petrol);
+  background: transparent;
+}
+
+.hero-btn--outline:hover {
+  background: rgba(0, 133, 152, 0.08);
+}
+
+.hero-btn--solid {
+  border: 1.5px solid var(--tg-petrol);
+  color: #fff;
+  background: var(--tg-petrol);
+}
+
+.hero-btn--solid:hover {
+  background: var(--tg-blue);
+  border-color: var(--tg-blue);
+}
+
+.hero-btn:focus-visible {
+  outline: 3px solid rgba(57, 193, 205, 0.45);
+  outline-offset: 2px;
+}
+
 .leaderboard-card {
   overflow: hidden;
   border: 1px solid var(--border);
@@ -520,6 +572,15 @@ footer p {
 
   .subtitle {
     width: 100%;
+  }
+
+  .hero-actions {
+    gap: 8px;
+  }
+
+  .hero-btn {
+    font-size: 0.84rem;
+    padding: 8px 13px;
   }
 
   .toolbar {

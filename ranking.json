@@ -15,10 +15,10 @@
   },
   {
     "name": "Dynamic Nodes",
-    "damping": 0.91,
-    "loss": 0.82,
-    "robustness": 0.9,
-    "changes": 0.78
+    "damping": 0.89,
+    "loss": 0.95,
+    "robustness": 0.86,
+    "changes": 0.84
   },
   {
     "name": "Power Flow Pioneers",

@@ -114,10 +114,23 @@ async function loadRanking() {
       throw new Error("Some teams have incomplete data or metrics outside the [0, 1] range.");
     }
 
-    globalRanking = data
+    const sorted = data
       .map((team) => ({ ...team, score: calculateScore(team) }))
-      .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name, "en"))
-      .map((team, index) => ({ ...team, globalPosition: index + 1 }));
+      .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name, "en"));
+
+    // Standard competition ranking: 1,1,3,4,4,6… (position = index of first in group + 1).
+    const positions = [];
+    sorted.forEach((team, index) => {
+      if (index === 0 || team.score !== sorted[index - 1].score) {
+        positions.push(index + 1);
+      } else {
+        positions.push(positions[index - 1]);
+      }
+    });
+    globalRanking = sorted.map((team, index) => ({
+      ...team,
+      globalPosition: positions[index],
+    }));
 
     renderRanking();
     const time = new Intl.DateTimeFormat("en-GB", {

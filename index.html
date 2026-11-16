@@ -1,195 +1,154 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Live leaderboard for the TenSyGrid x VeraGrid 1-day hackathon challenge.">
-    <meta name="theme-color" content="#0f172a">
-    <title>TenSyGrid x VeraGrid · Live Leaderboard</title>
-    <link rel="icon" type="image/png" href="images/tensygrid-icon.png">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
-  </head>
 
-  <body>
-    <div class="page-shell">
-      <header class="hero">
-        <h1 class="brand-lockup" aria-label="TenSyGrid x VeraGrid">
-          <span class="tensygrid-logo-frame">
-            <img
-              class="tensygrid-logo"
-              src="images/tensygrid-logo.png"
-              alt="TensyGrid"
-              width="572"
-              height="152"
-            >
-          </span>
-          <span class="brand-separator" aria-hidden="true">×</span>
-          <span class="veragrid-logo-frame">
-            <img
-              class="veragrid-logo"
-              src="images/veragrid-logo.png"
-              alt="VeraGrid"
-              width="750"
-              height="150"
-            >
-          </span>
-        </h1>
-        <p class="subtitle">Dynamic Topology Optimization &amp; Converter Tuning — Live Leaderboard</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Live leaderboard for the TenSyGrid x VeraGrid 1-day hackathon challenge.">
+  <meta name="theme-color" content="#0f172a">
+  <title>TenSyGrid x VeraGrid · Live Leaderboard</title>
+  <link rel="icon" type="image/png" href="images/tensygrid-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
 
-        <div class="hero-actions">
-          <a
-            class="hero-btn hero-btn--outline"
-            href="https://tensygrid.eu/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            Project website
-          </a>
-          <a
-            class="hero-btn hero-btn--solid"
-            href="files/hackathon-bases.pdf"
-            download
-          >
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Hackathon rules
-          </a>
-          <a
-            class="hero-btn hero-btn--solid"
-            href="files/hackathon-slides.pdf"
-            download
-          >
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Slides
-          </a>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <h1 class="brand-lockup" aria-label="TenSyGrid x VeraGrid">
+        <span class="tensygrid-logo-frame">
+          <img class="tensygrid-logo" src="images/tensygrid-logo.png" alt="TensyGrid" width="572" height="152">
+        </span>
+        <span class="brand-separator" aria-hidden="true">×</span>
+        <span class="veragrid-logo-frame">
+          <img class="veragrid-logo" src="images/veragrid-logo.png" alt="VeraGrid" width="750" height="150">
+        </span>
+      </h1>
+      <p class="subtitle">Dynamic Topology Optimization &amp; Converter Tuning — Live Leaderboard</p>
+
+      <div class="hero-actions">
+        <a class="hero-btn hero-btn--outline" href="https://tensygrid.eu/" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          Project website
+        </a>
+        <a class="hero-btn hero-btn--solid" href="files/hackathon_26_11_2026.pdf" download>
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Hackathon schedule
+        </a>
+        <a class="hero-btn hero-btn--solid" href="files/hackathon-slides.pdf" download>
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Slides
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="leaderboard-card" aria-labelledby="leaderboard-title">
+        <div class="toolbar">
+          <div>
+            <p class="eyebrow">Official ranking</p>
+            <h2 id="leaderboard-title">Live results</h2>
+          </div>
+
+          <div class="actions">
+            <label class="search-box" for="team-search">
+              <span aria-hidden="true">⌕</span>
+              <span class="sr-only">Search for a team</span>
+              <input id="team-search" type="text" placeholder="Search for a team…" autocomplete="off"
+                spellcheck="false">
+            </label>
+            <button id="refresh-button" class="refresh-button" type="button">
+              <span aria-hidden="true">↻</span>
+              Refresh data
+            </button>
+          </div>
         </div>
-      </header>
 
-      <main>
-        <section class="leaderboard-card" aria-labelledby="leaderboard-title">
-          <div class="toolbar">
-            <div>
-              <p class="eyebrow">Official ranking</p>
-              <h2 id="leaderboard-title">Live results</h2>
-            </div>
+        <div id="status" class="status" role="status" aria-live="polite">Loading results…</div>
 
-            <div class="actions">
-              <label class="search-box" for="team-search">
-                <span aria-hidden="true">⌕</span>
-                <span class="sr-only">Search for a team</span>
-                <input
-                  id="team-search"
-                  type="text"
-                  placeholder="Search for a team…"
-                  autocomplete="off"
-                  spellcheck="false"
-                >
-              </label>
-              <button id="refresh-button" class="refresh-button" type="button">
-                <span aria-hidden="true">↻</span>
-                Refresh data
-              </button>
-            </div>
+        <div class="table-wrap">
+          <table>
+            <caption class="sr-only">Team ranking ordered by total score</caption>
+            <thead>
+              <tr>
+                <th scope="col">Pos</th>
+                <th scope="col">Team</th>
+                <th scope="col"><span class="metric-symbol">S<sub>damping</sub></span> <small>35%</small></th>
+                <th scope="col"><span class="metric-symbol">S<sub>loss</sub></span> <small>25%</small></th>
+                <th scope="col"><span class="metric-symbol">S<sub>robustness</sub></span> <small>25%</small></th>
+                <th scope="col"><span class="metric-symbol">S<sub>changes</sub></span> <small>15%</small></th>
+                <th scope="col" class="score-heading">Total score</th>
+              </tr>
+            </thead>
+            <tbody id="ranking-body"></tbody>
+          </table>
+        </div>
+
+        <p id="empty-state" class="empty-state" hidden>No team was found with that name.</p>
+      </section>
+
+      <aside class="formula-note" aria-label="Scoring formula">
+        <span class="info-icon" aria-hidden="true">i</span>
+        <p>
+          <strong>Official formula:</strong>
+          Score = (0.35 · S<sub>damping</sub> + 0.25 · S<sub>loss</sub> +
+          0.25 · S<sub>robustness</sub> + 0.15 · S<sub>changes</sub>) × 100.
+          A damping value of 0 indicates an unstable mode.
+        </p>
+      </aside>
+
+      <section class="partners-section" aria-labelledby="partners-title">
+        <div class="partners-heading">
+          <p class="eyebrow">TenSyGrid consortium</p>
+          <h2 id="partners-title">Project partners</h2>
+        </div>
+
+        <div class="partner-logos">
+          <div class="partner-logo-card">
+            <img src="images/partner-fraunhofer-iwes.png" alt="Fraunhofer Institute for Wind Energy Systems IWES"
+              width="352" height="97">
           </div>
-
-          <div id="status" class="status" role="status" aria-live="polite">Loading results…</div>
-
-          <div class="table-wrap">
-            <table>
-              <caption class="sr-only">Team ranking ordered by total score</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Pos</th>
-                  <th scope="col">Team</th>
-                  <th scope="col"><span class="metric-symbol">S<sub>damping</sub></span> <small>35%</small></th>
-                  <th scope="col"><span class="metric-symbol">S<sub>loss</sub></span> <small>25%</small></th>
-                  <th scope="col"><span class="metric-symbol">S<sub>robustness</sub></span> <small>25%</small></th>
-                  <th scope="col"><span class="metric-symbol">S<sub>changes</sub></span> <small>15%</small></th>
-                  <th scope="col" class="score-heading">Total score</th>
-                </tr>
-              </thead>
-              <tbody id="ranking-body"></tbody>
-            </table>
+          <div class="partner-logo-card">
+            <img src="images/partner-upc.png" alt="Universitat Politècnica de Catalunya, UPC" width="1121" height="376">
           </div>
-
-          <p id="empty-state" class="empty-state" hidden>No team was found with that name.</p>
-        </section>
-
-        <aside class="formula-note" aria-label="Scoring formula">
-          <span class="info-icon" aria-hidden="true">i</span>
-          <p>
-            <strong>Official formula:</strong>
-            Score = (0.35 · S<sub>damping</sub> + 0.25 · S<sub>loss</sub> +
-            0.25 · S<sub>robustness</sub> + 0.15 · S<sub>changes</sub>) × 100.
-            A damping value of 0 indicates an unstable mode.
-          </p>
-        </aside>
-
-        <section class="partners-section" aria-labelledby="partners-title">
-          <div class="partners-heading">
-            <p class="eyebrow">TenSyGrid consortium</p>
-            <h2 id="partners-title">Project partners</h2>
+          <div class="partner-logo-card">
+            <img src="images/partner-haw-hamburg.png" alt="HAW Hamburg" width="664" height="176">
           </div>
-
-          <div class="partner-logos">
-            <div class="partner-logo-card">
-              <img
-                src="images/partner-fraunhofer-iwes.png"
-                alt="Fraunhofer Institute for Wind Energy Systems IWES"
-                width="352"
-                height="97"
-              >
-            </div>
-            <div class="partner-logo-card">
-              <img
-                src="images/partner-upc.png"
-                alt="Universitat Politècnica de Catalunya, UPC"
-                width="1121"
-                height="376"
-              >
-            </div>
-            <div class="partner-logo-card">
-              <img
-                src="images/partner-haw-hamburg.png"
-                alt="HAW Hamburg"
-                width="664"
-                height="176"
-              >
-            </div>
-            <div class="partner-logo-card">
-              <img
-                src="images/eroots_logos/eRoots_logo_final_v2_landscape_fullColor.png"
-                alt="eRoots Analytics"
-                width="3331"
-                height="1406"
-              >
-            </div>
-            <div class="partner-logo-card">
-              <img
-                src="images/partner-university-malta.png"
-                alt="University of Malta"
-                width="394"
-                height="129"
-              >
-            </div>
+          <div class="partner-logo-card">
+            <img src="images/eroots_logos/eRoots_logo_final_v2_landscape_fullColor.png" alt="eRoots Analytics"
+              width="3331" height="1406">
           </div>
-
-          <div class="funding-strip" aria-label="Funding programme">
-            <p>Co-funded by</p>
-            <img
-              src="images/cetpartnership-logo.png"
-              alt="CETPartnership"
-              width="576"
-              height="285"
-            >
+          <div class="partner-logo-card">
+            <img src="images/partner-university-malta.png" alt="University of Malta" width="394" height="129">
           </div>
-        </section>
-      </main>
+        </div>
 
-      <footer>
-        <p>TenSyGrid x VeraGrid 1-day hackathon challenge · Barcelona, 2026</p>
-      </footer>
-    </div>
-  </body>
+        <div class="funding-strip" aria-label="Funding programme">
+          <p>Co-funded by</p>
+          <img src="images/cetpartnership-logo.png" alt="CETPartnership" width="576" height="285">
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>TenSyGrid x VeraGrid 1-day hackathon challenge · Barcelona, 2026</p>
+    </footer>
+  </div>
+</body>
+
 </html>

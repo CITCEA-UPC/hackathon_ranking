@@ -1,41 +1,41 @@
 [
   {
-    "name": "Grid Guardians",
+    "name": "Grid Guardians (Example)",
     "damping": 0.94,
     "loss": 0.88,
     "robustness": 0.92,
     "changes": 0.81
   },
   {
-    "name": "Volt Optimizers",
+    "name": "Volt Optimizers (Example)",
     "damping": 0.89,
     "loss": 0.95,
     "robustness": 0.86,
     "changes": 0.84
   },
   {
-    "name": "Dynamic Nodes",
+    "name": "Dynamic Nodes (Example)",
     "damping": 0.89,
     "loss": 0.95,
     "robustness": 0.86,
     "changes": 0.83
   },
   {
-    "name": "Power Flow Pioneers",
+    "name": "Power Flow Pioneers (Example)",
     "damping": 0.84,
     "loss": 0.9,
     "robustness": 0.8,
     "changes": 0.93
   },
   {
-    "name": "Synchro Squad",
+    "name": "Synchro Squad (Example)",
     "damping": 0.78,
     "loss": 0.86,
     "robustness": 0.83,
     "changes": 0.88
   },
   {
-    "name": "Blackout Breakers",
+    "name": "Blackout Breakers (Example)",
     "damping": 0,
     "loss": 0.96,
     "robustness": 0.42,

@@ -2,7 +2,7 @@
 
 A lightweight, responsive leaderboard for the **TenSyGrid x VeraGrid 1-day hackathon challenge**, held on 26 November 2026 and organised by UPC, CITCEA, eRoots, and the CETPartnership Horizon Europe consortium.
 
-The application displays the live ranking for the dynamic topology optimisation and converter tuning challenge. It is a fully static website built with HTML5, CSS3, and Vanilla JavaScript—no framework, build step, backend, database, or external API is required.
+The application displays the live ranking for the dynamic topology optimisation and converter tuning challenge. The leaderboard is built with HTML5, CSS3, and vanilla JavaScript. The hackathon document buttons use a Vercel Function to serve the PDFs from the `master` branch of `CITCEA-UPC/VeraGrid_TenSyGrid`. Updates to those PDFs do not require a leaderboard redeploy.
 
 ## TenSyGrid consortium
 
@@ -147,7 +147,7 @@ This prevents the browser from displaying an outdated ranking after deployment.
 5. Leave the build command and output directory empty.
 6. Select **Deploy**.
 
-The files are served directly from the repository root, so no `vercel.json` configuration is required.
+The PDF links open the copies in `files/` in a local static preview. On Vercel, `vercel.json` redirects those links to the function that serves the current files from GitHub.
 
 ## Technology
 

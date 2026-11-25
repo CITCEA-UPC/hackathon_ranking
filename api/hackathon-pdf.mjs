@@ -1,8 +1,8 @@
 const source = 'https://raw.githubusercontent.com/CITCEA-UPC/VeraGrid_TenSyGrid/master/hackathon/';
 
 const documents = new Map([
-  ['organization', 'hackathon.pdf'],
-  ['schedule', 'hackathon_26_11_2026.pdf'],
+  ['organization', 'hackathon_organization.pdf'],
+  ['schedule', 'hackathon_schedule.pdf'],
   ['warmup', 'participant_warmup.pdf'],
 ]);
 

@@ -48,7 +48,8 @@ function formatPercentage(value) {
   return `${(value * 100).toFixed(1)}%`;
 }
 
-function getRankLabel(position) {
+function getRankLabel(position, score) {
+  if (score === 0) return "";
   const medals = ["🥇", "🥈", "🥉"];
   return medals[position - 1] ?? String(position);
 }
@@ -72,11 +73,12 @@ function renderRanking() {
   visibleTeams.forEach((team) => {
     const row = document.createElement("tr");
     const position = team.globalPosition;
+    const hasMedal = position <= 3 && team.score > 0;
 
-    if (position <= 3) row.classList.add(`podium-${position}`);
+    if (hasMedal) row.classList.add(`podium-${position}`);
 
     row.append(
-      createCell(getRankLabel(position), position <= 3 ? "rank medal" : "rank"),
+      createCell(getRankLabel(position, team.score), hasMedal ? "rank medal" : "rank"),
       createCell(team.name, "team-name"),
       createCell(
         formatPercentage(team.damping),

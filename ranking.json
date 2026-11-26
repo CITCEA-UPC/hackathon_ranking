@@ -7,17 +7,17 @@
     "changes": 0
   },
   {
-    "name": "404 Grid Not Found",
+    "name": "Cannoli",
     "damping": 0,
     "loss": 0,
     "robustness": 0,
     "changes": 0
   },
   {
-    "name": "Cannoli",
-    "damping": 0,
-    "loss": 0,
-    "robustness": 0,
-    "changes": 0
+    "name": "404 Grid Not Found",
+    "damping": 0.3175,
+    "loss": 0.0003,
+    "robustness": 0.25,
+    "changes": 0.1473
   }
 ]
